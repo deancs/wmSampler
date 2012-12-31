@@ -3,7 +3,7 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "au.com.scdconsulting.wmSampler"
         versionCode="10" 
-        version   = "2.3">
+        version   = "2.4">
 
     <!-- versionCode is optional and Android only -->
 
