@@ -17,7 +17,7 @@
       	  <a href="" ng-click="predicate=''">unsorted</a>&nbsp;
       	  <a href="" ng-click="predicate='name'">alpha</a>&nbsp;
       	  <a href="" ng-click="predicate='idx'">idx</a><br>
-      	  <select ng-selected="mySelected" ng-model="wmStyle" size="4" ng-options="style.name as style.name for style in wmStyles | filter:searchtext | orderBy:predicate" value={{style.name}}">
+      	  <select ng-model="wmStyle" size="4" ng-options="style.name as style.name for style in wmStyles | filter:searchtext | orderBy:predicate" value={{style.name}}">
       	  </select><br>
           <div class="hidden-phone">
               <input type="text" ui-reset ng-model="newStyle" placeholder="add/edit style" maxlength="10"/> <input id="idx" type="number" ng-model="newIdx" min="0" max="9"/> 

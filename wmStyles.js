@@ -37,7 +37,7 @@ wmClassesMVC.controller( 'wmClassesCtrl', function wmClassesCtrl($scope, $http,$
 	$scope.myTemplate = "dialog.html";
 	$scope.wmStyle = wmStyles[0].name;
 	//$scope.msg = $scope.wmStyles[0].name;
-	$scope.version = 'v2.2';
+	$scope.version = 'v2.3';
 		$scope.title = 'Lorem Ipsum';
   	$scope.text = 'Neque porro quisquam est qui dolorem ipsum quia dolor...';
 
