@@ -2,7 +2,7 @@
 <html ng-app="wmClassesMVC">
   <head>
   <title>Winemate UI sampler</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,maximum-scale=1.0,initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="stylesheet" type="text/css" href="frameworks/twitter-bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="frameworks/twitter-bootstrap/css/bootstrap-responsive.min.css">
@@ -13,7 +13,7 @@
     <h4>wmSampler. Version {{version}}</h3>
     <hr>
       <form name="form" class="css-form" novalidate>
-      	  <input type="text" ng-model="searchtext" placeholder="Search.."/><br>
+      	  <input type="text" ui-reset ng-model="searchtext" placeholder="Search.."/><br>
       	  <a href="" ng-click="predicate=''">unsorted</a>&nbsp;
       	  <a href="" ng-click="predicate='name'">alpha</a>&nbsp;
       	  <a href="" ng-click="predicate='idx'">idx</a><br>
