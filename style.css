@@ -1,0 +1,82 @@
+   
+      .css-form input.ng-invalid.ng-dirty {
+        background-color: #FA787E;
+      }
+    
+      .css-form input.ng-valid.ng-dirty {
+        background-color: #78FA89;
+      }
+      
+      #wineStyles {
+      
+      	width:100px;
+      }
+      
+      #idx {
+      	width:30px;
+      }	
+
+.wmBorder {
+	border:1px solid LightGray;
+}
+
+
+.ui-reset {
+	display:block;
+	outline:0;
+	position: absolute;
+	top: 2;
+	right: 0;
+	z-index: 2;
+	display: none;
+	cursor: pointer;
+
+	width: 14px;
+	height: 14px!important;
+	margin: 5px;
+	margin-top:7px;
+	line-height: 14px;
+	vertical-align: text-top;
+	background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings.png");
+	background-repeat: no-repeat;
+	background-position: -48px -96px;
+
+}
+
+.zippy {
+  border: 1px solid black;
+  display: inline-block;
+  width: 250px;
+}
+.zippy.opened > .title:before { content: '- '; }
+.zippy.opened > .body { display: block; }
+.zippy.closed > .title:before { content: '+ '; }
+.zippy.closed > .body { display: none; }
+.zippy > .title {
+  background-color: black;
+  color: white;
+  padding: .1em .3em;
+  cursor: pointer;
+}
+.zippy > .body {
+  padding: .1em .3em;
+}
+
+.modalPopup {
+  border: 1px solid black;
+  display: inline-block;
+  width: 250px;
+}
+.modalPopup.opened > .title:before { content: '- '; }
+.modalPopup.opened > .body { display: block; }
+.modalPopup.closed > .title:before { content: '+ '; }
+.modalPopup.closed > .body { display: none; }
+.modalPopup > .title {
+  background-color: black;
+  color: white;
+  padding: .1em .3em;
+  cursor: pointer;
+}
+.modalPopup > .body {
+  padding: .1em .3em;
+}

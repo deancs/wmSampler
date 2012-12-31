@@ -1,0 +1,66 @@
+<!doctype html>
+<html ng-app="wmClassesMVC">
+  <head>
+  <title>Winemate UI sampler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="frameworks/twitter-bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="frameworks/twitter-bootstrap/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="frameworks/angularUI/angular-ui.min.css">
+  </head>
+  <body>
+    <div ng-controller="wmClassesCtrl">
+    <h4>wmSampler. Version {{version}}</h3>
+    <hr>
+      <form name="form" class="css-form" novalidate>
+      	  <input type="text" ng-model="searchtext" placeholder="Search.."/><br>
+      	  <a href="" ng-click="predicate=''">unsorted</a>&nbsp;
+      	  <a href="" ng-click="predicate='name'">alpha</a>&nbsp;
+      	  <a href="" ng-click="predicate='idx'">idx</a><br>
+      	  <select ng-selected="mySelected" ng-model="wmStyle" size="4">
+                <option ng-repeat="style in wmStyles | filter:searchtext | orderBy:predicate" value="{{style.name}}">{{style.name}}
+      	  </select><br>
+          <div class="hidden-phone">
+              <input type="text" ui-reset ng-model="newStyle" placeholder="add/edit style" maxlength="10"/> <input id="idx" type="number" ng-model="newIdx" min="0" max="9"/> 
+      	  <button class="wmButton" ng-click="add()">add</button>
+      	  <button class="wmButton" ng-click="edit()">edit</button>
+      	  </div>
+      	  <button class="wmButton" ng-click="fetch()">reset</button>
+      	  <button class="wmButton" ng-click="save()">save</button>
+      	  <button class="wmButton" ng-click="load()">load</button>
+      	  <button class="wmButton" ng-click="delete()">del</button>
+      	  <br>
+      	  status: selection: entries: msg<br>
+      	  {{status}} : {{wmStyle}} : {{entryCount}} : {{msg}}<br>
+        <hr>
+            <div class="wmEditable" contentEditable="true" ng-model="myContent">Click to edit me</div>
+            <p>datamodel is = {{myContent}}</p>
+            <button class="wmButton" ng-click="border()">border</button>
+        <hr>
+            <button ng-click="modalShown=true">POPUP</button>
+            <div style="padding:10px;" ui-modal ng-model="modalShown" id="myModal">
+                    <h3>
+                        Title goes here
+                        <button style="float:right;" class="cancel" ng-click="modalShown=false">CANCEL</button>
+                    </h3>
+                    <p>I have Flexible height</p>
+                    <textarea ng-model="filler" placeholder="Type Here"></textarea>
+                    <p>{{filler}}</p>
+            </div>
+         <hr>
+          <div class="zippy" zippy-title="Details: {{title}}...">{{text}}</div>
+        <hr>
+  </body>
+<footer>
+</footer>
+<script src="frameworks/cordova-2.2.0.js"></script>
+<script src="frameworks/jQuery/jquery-1.8.3.min.js"></script>
+<script src="frameworks/angular/angular.min.js"></script>
+<script src="frameworks/angularUI/angular-ui.min.js"></script>
+<script src="frameworks/twitter-bootstrap/js/bootstrap.min.js"></script>
+<script src="common.js"></script>
+<script src="wmStyles.js"></script>
+<script src="wmStylesServices.js"></script>
+</html>
+	
+	
