@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "au.com.scdconsulting.wmSampler"
+        versionCode="10" 
+        version   = "1.0.1">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>wmUISampler</name>
+
+    <description>
+        An prototype for the UI and MVC functions of winemate
+    </description>
+
+    <author href="http://www.scdconsulting.com.au" email="dean@scdconsulting.com.au">
+        Dean Cleave-Smith
+    </author>
+
+</widget>
