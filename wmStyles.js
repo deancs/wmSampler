@@ -38,8 +38,8 @@ wmClassesMVC.controller( 'wmClassesCtrl', function wmClassesCtrl($scope, $http,$
 	$scope.wmStyle = wmStyles[0].name;
 	//$scope.msg = $scope.wmStyles[0].name;
 	$scope.version = 'v2.3';
-		$scope.title = 'Lorem Ipsum';
-  	$scope.text = 'Neque porro quisquam est qui dolorem ipsum quia dolor...';
+	$scope.title = 'this is a clickable heading';
+  	$scope.text = 'which reveals this text..';
 
 
 
@@ -49,6 +49,11 @@ wmClassesMVC.controller( 'wmClassesCtrl', function wmClassesCtrl($scope, $http,$
 		wmStylesStorage.put(wmStyles);
 	  }, true);
 	  
+	$scope.itChanged = function() {
+		$scope.msg = '*';
+		$scope.newStyle = $scope.wmStyle;
+	}
+
 	$scope.update = function(user) {
 		$scope.master= angular.copy(user);
 	};
@@ -105,6 +110,7 @@ wmClassesMVC.controller( 'wmClassesCtrl', function wmClassesCtrl($scope, $http,$
 			if (aStyle.name === $scope.wmStyle) {
 				wmStyles[idx].name = $scope.newStyle;
 				wmStyles[idx].idx = $scope.newIdx;
+				$scope.wmStyle = $scope.newStyle;
 				$scope.msg = 'edited:' + $scope.wmStyle;
 			};
 		});		

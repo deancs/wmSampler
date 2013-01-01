@@ -1,25 +1,31 @@
    
-      .css-form input.ng-invalid.ng-dirty {
-        background-color: #FA787E;
-      }
-    
-      .css-form input.ng-valid.ng-dirty {
-        background-color: #78FA89;
-      }
-      
-      #wineStyles {
-      
-      	width:100px;
-      }
-      
-      #idx {
-      	width:30px;
-      }	
+.css-form input.ng-invalid.ng-dirty {
+background-color: #FA787E;
+}
+
+.css-form input.ng-valid.ng-dirty {
+background-color: #78FA89;
+}
+
+#wineStyles {
+
+width:100px;
+}
+
+#idx {
+width:30px;
+}	
 
 .wmBorder {
 	border:1px solid LightGray;
 }
 
+.wmSelect {
+	margin-top:10px;
+	height:26px!important;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
 
 .ui-reset {
 	display:block;
@@ -46,17 +52,40 @@
 .zippy {
   border: 1px solid black;
   display: inline-block;
-  width: 250px;
+
 }
-.zippy.opened > .title:before { content: '- '; }
+.zippy.opened > .title:before {	font-family: FontAwesome;
+								font-weight: normal;
+								font-style: normal;
+								font-size:1.33em;
+								vertical-align: middle;
+								line-height: 120%;
+								display: inline-block;
+								text-decoration: inherit;
+								padding-right:4px;
+								content: '\f056 '; }
 .zippy.opened > .body { display: block; }
-.zippy.closed > .title:before { content: '+ '; }
+.zippy.closed > .title:before { font-family: FontAwesome;
+								font-weight: normal;
+								font-style: normal;
+								font-size:1.33em;
+								vertical-align: middle;
+								line-height: 120%;
+								display: inline-block;
+								text-decoration: inherit;
+								padding-right:4px;
+								content: '\f055'; }
 .zippy.closed > .body { display: none; }
 .zippy > .title {
   background-color: black;
   color: white;
   padding: .1em .3em;
   cursor: pointer;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 .zippy > .body {
   padding: .1em .3em;
