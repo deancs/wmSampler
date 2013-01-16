@@ -1,26 +1,32 @@
    
-      .css-form input.ng-invalid.ng-dirty {
-        background-color: #FA787E;
-      }
-    
-      .css-form input.ng-valid.ng-dirty {
-        background-color: #78FA89;
-      }
-      
-      #wineStyles {
-      
-      	width:100px;
-      }
-      
-      #idx {
-      	width:30px;
-      }	
-
-.wmBorder {
-	border:1px solid LightGray;
+.css-form input.ng-invalid.ng-dirty {
+background-color: #FA787E;
 }
 
+.css-form input.ng-valid.ng-dirty {
+background-color: #78FA89;
+}
 
+.nav-pills > li > a {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#s2Wineries {
+	width:120px;
+}
+#wineList {
+	height:300px;
+	width:99%;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	border:1px solid gray;
+	border-radius:6px;
+}
+
+a:hover {
+	text-decoration: none;
+}
 .ui-reset {
 	display:block;
 	outline:0;
@@ -39,44 +45,49 @@
 	vertical-align: text-top;
 	background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings.png");
 	background-repeat: no-repeat;
-	background-position: -48px -96px;
+	background-position: -24px -96px;
 
 }
 
 .zippy {
   border: 1px solid black;
   display: inline-block;
-  width: 250px;
+
 }
-.zippy.opened > .title:before { content: '- '; }
+.zippy.opened > .title:before {	font-family: FontAwesome;
+								font-weight: normal;
+								font-style: normal;
+								font-size:1.33em;
+								vertical-align: middle;
+								line-height: 120%;
+								display: inline-block;
+								text-decoration: inherit;
+								padding-right:4px;
+								content: '\f056 '; }
 .zippy.opened > .body { display: block; }
-.zippy.closed > .title:before { content: '+ '; }
+.zippy.closed > .title:before { font-family: FontAwesome;
+								font-weight: normal;
+								font-style: normal;
+								font-size:1.33em;
+								vertical-align: middle;
+								line-height: 120%;
+								display: inline-block;
+								text-decoration: inherit;
+								padding-right:4px;
+								content: '\f055'; }
 .zippy.closed > .body { display: none; }
 .zippy > .title {
   background-color: black;
   color: white;
-  padding: .1em .3em;
+  padding-top:4px;
+  padding-left:4px;
   cursor: pointer;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
 }
 .zippy > .body {
-  padding: .1em .3em;
-}
-
-.modalPopup {
-  border: 1px solid black;
-  display: inline-block;
-  width: 250px;
-}
-.modalPopup.opened > .title:before { content: '- '; }
-.modalPopup.opened > .body { display: block; }
-.modalPopup.closed > .title:before { content: '+ '; }
-.modalPopup.closed > .body { display: none; }
-.modalPopup > .title {
-  background-color: black;
-  color: white;
-  padding: .1em .3em;
-  cursor: pointer;
-}
-.modalPopup > .body {
   padding: .1em .3em;
 }

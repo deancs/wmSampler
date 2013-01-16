@@ -1,12 +1,10 @@
 /*
-Controller for Winemate Classes (styles)
+Controller for Winemate Parameter Wineries
 
 */
-//$("#st1").on("change", function(e) { alert(e.val); })
-//$("#st1").select2('val',{'text':'Red','id':1});
 
 
-var wmStyleCtrl = function wmClassesCtrl($scope, $http,$location, wmParamStorage,filterFilter) {
+var wmWineriesCtrl = function wmWineriesCtrl($scope, $http,$location, wmParamStorage,filterFilter) {
 
 $scope.wmPopupActionCancel = 0;
 var wmPopupActionCancel = 0;
@@ -14,17 +12,17 @@ var wmPopupActionAdd = 1;
 var wmPopupActionEdit = 2;
 var wmPopupActionDelete = 3;
   
-	$scope.wmStyles = wmStyles;
+	$scope.wmWineries = wmWineries;
 
-	$scope.$watch('wmStyles', function() {
-	    wmParamStorage.put('wmStyles',wmStyles);
+	$scope.$watch('wmWineries', function() {
+	    wmParamStorage.put('wmWineries',wmWineries);
 	}, true);
-	
+	 
 
 	$scope.openPopup = function() {
 		$scope.popup=true;
-		$scope.wmStyles.wmNew = null;
-		$scope.wmStyles.wmNew = $scope.wmStyles.wmCurrent;
+		$scope.wmWineries.wmNew = null;
+		$scope.wmWineries.wmNew = $scope.wmWineries.wmCurrent;
 	} 
 
 	$scope.closePopup = function(wmAction) {
@@ -57,11 +55,11 @@ var wmPopupActionDelete = 3;
 		$scope.code = null;
 		$scope.response = null;
 
-		$http({method: 'GET', url: './data/wmStyles.json'}).
+		$http({method: 'GET', url: './data/wmWineries.json'}).
 			  success(function(data, status) {
 				$scope.status = status;
-				$scope.wmStyles = angular.copy(data);
-				wmStyles = $scope.wmStyles;
+				$scope.wmWineries = angular.copy(data);
+				wmWineries = $scope.wmWineries;
 			  }).
 			  error(function(data, status) {
 				$scope.data = data || "Request failed";
@@ -70,8 +68,7 @@ var wmPopupActionDelete = 3;
 	};
 
 	$scope.add = function () {
-
-	 if ( !wmStyles.wmNew.text ) {
+	 if ( !wmWineries.wmNew.text ) {
 	 	  alert('Name Required');
 		  return true;
 		}
@@ -79,16 +76,16 @@ var wmPopupActionDelete = 3;
 
 		//establish next available id
 		tmp = 0;
-		wmStyles.data.forEach(function(aStyle,idx) {
+		wmWineries.data.forEach(function(aStyle,idx) {
 			if (aStyle.id >= tmp) tmp = aStyle.id;
 		});
 		tmp++;
 
 
-		wmStyles.data.push({
+		wmWineries.data.push({
 		  id: tmp,
-		  text: $scope.wmStyles.wmNew.text,
-		  idx: $scope.wmStyles.wmNew.idx
+		  text: $scope.wmWineries.wmNew.text,
+		  idx: $scope.wmWineries.wmNew.idx
 		});
 
 		$scope.newStyle = '';
@@ -97,16 +94,16 @@ var wmPopupActionDelete = 3;
 	 
 	$scope.edit = function() {
 	
-		if ( !wmStyles.wmNew.text ) {
+		if ( !wmWineries.wmNew.text ) {
 	 	  alert('Name Required');
 		  return true;
 		}
 
 		tmp = 0;
-		wmStyles.data.forEach(function(aStyle,idx,tmp) {
-			if ((aStyle.text === wmStyles.wmNew.text) && tmp) {
-				wmStyles.data[idx].text = wmStyles.wmNew.text;
-				wmStyles.data[idx].idx = wmStyles.wmNew.idx;
+		wmWineries.data.forEach(function(aStyle,idx,tmp) {
+			if ((aStyle.text === wmWineries.wmNew.text) && tmp) {
+				wmWineries.data[idx].text = wmWineries.wmNew.text;
+				wmWineries.data[idx].idx = wmWineries.wmNew.idx;
 				$scope.msg = 'edit-done';
 				tmp++;
 			}
@@ -117,9 +114,9 @@ var wmPopupActionDelete = 3;
 	$scope.delete = function() {
 		
 		tmp = 0;
-		wmStyles.data.forEach(function(aStyle,idx,tmp) {
-			if ((aStyle.text === wmStyles.wmCurrent.text) && tmp) {
-				wmStyles.data.splice(idx,1);
+		wmWineries.data.forEach(function(aStyle,idx,tmp) {
+			if ((aStyle.text === wmWineries.wmCurrent.text) && tmp) {
+				wmWineries.data.splice(idx,1);
 				$scope.msg = 'delete-done';
 				tmp++;
 			};
@@ -132,13 +129,13 @@ var wmPopupActionDelete = 3;
 
 	$scope.save = function() {
 
-		wmParamStorage.put('wmStyles',wmStyles);
+		wmParamStorage.put('wmWineries',wmWineries);
 
 	};
 
 	$scope.load = function() {
 
-		wmStyles = angular.copy(wmParamStorage.get('wmStyles'));
+		wmWineries = angular.copy(wmParamStorage.get('wmWineries'));
 
 	};
 

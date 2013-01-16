@@ -1,0 +1,12 @@
+{"data":[
+{"text":"Brown Brothers","id":1},
+{"text":"Marque Wines","id":2},
+{"text":"Tabhilk","id":3},
+{"text":"Sepplet","id":4},
+{"text":"Dal Zotto","id":5},
+{"text":"Darling Estate","id":6}
+],"config":
+{"min":0,"max":9,"length":20},
+"info":
+{"version":1}
+}
