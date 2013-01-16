@@ -1,0 +1,15 @@
+<div>
+    <h4>
+        Edit Winery
+        <a style="float:right;margin-top:6px;" class="btn btn-small cancel" href="#" ng-click="closePopup(0)">Cancel</a>
+    </h4>
+    <hr>
+    <p>To delete the current winery select delete.</p><p>To change the existing wineryenter the changes and select edit.</p><p>To add a new winery enter the details and select add.</p>
+
+	 <input type="text" ui-reset ng-model="wmWineries.wmNew.text" placeholder="add/edit winery" maxlength="{{wmWineries.config.length}}"/> 
+	 <input id="idx" type="number" ng-model="wmWineries.wmNew.idx" min="{{wmWinery.config.min}}" max="{{wmWineries.config.max}}"/> 
+	 <hr>
+	 <a style="float:right;margin-right:10px;" class="btn btn-small btn-success" href="#" ng-click="closePopup(1)">Add</a>
+	 <a style="float:right;margin-right:10px;" class="btn btn-small btn-success" href="#" ng-click="closePopup(2)">Edit</a>
+	 <a style="float:right;margin-right:10px;" class="btn btn-small btn-danger" href="#" ng-click="closePopup(3)">Delete</a>
+</div>
