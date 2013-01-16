@@ -1,0 +1,20 @@
+{"data":[
+{"text":"King Valley","country":"AU","idx":1,"id":1},
+{"text":"Yarra Valley","country":"AU","idx":2,"id":2},
+{"text":"Barossa Valley","country":"AU","idx":2,"id":3},
+{"text":"McClarenVale","country":"AU","idx":2,"id":4},
+{"text":"Rhone","country":"FR","idx":2,"id":5},
+{"text":"Bordeaux","country":"FR","idx":2,"id":6},
+{"text":"Champagne","country":"FR","idx":2,"id":7},
+{"text":"Burgandy","country":"FR","idx":2,"id":8},
+{"text":"Marlborough","country":"NZ","idx":2,"id":9},
+{"text":"Martinorough","country":"NZ","idx":2,"id":10},
+{"text":"Hawkes Bay","country":"NZ","idx":2,"id":12},
+{"text":"Otago","country":"NZ","idx":2,"id":12},
+{"text":"Chiantti","country":"IT","idx":2,"id":13}
+],"config":
+{"lengthRegion":14,"lengthCountry":2},
+"info":
+{"lastUpdated":null,"version":1}
+}
+

@@ -1,0 +1,18 @@
+{"data":[
+{"text":"Shirz","idx":1,"id":1,"pct":100},
+{"text":"Merlot","idx":1,"id":2,"pct":100},
+{"text":"Cabernet Sauvignon","idx":1,"id":3,"pct":100},
+{"text":"Viognier","idx":1,"id":4,"pct":100},
+{"text":"Verdehlo","idx":1,"id":5,"pct":100},
+{"text":"Pinot Noir","idx":1,"id":6,"pct":100},
+{"text":"Pinot Menuier","idx":1,"id":7,"pct":100},
+{"text":"Chardonnay","idx":1,"id":8,"pct":100},
+{"text":"Riesling","idx":1,"id":9,"pct":100},
+{"text":"Sauvignon Blanc","idx":1,"id":10,"pct":100},
+{"text":"Sangiovese","idx":1,"id":11,"pct":100},
+{"text":"Barbera","idx":1,"id":12,"pct":100}
+],"config":
+{"min":0,"max":0,"length":20},
+"info":
+{"version":1}
+}

@@ -1,0 +1,15 @@
+<div>
+    <h4>
+        Variety
+        <a style="float:right;margin-top:6px;" class="btn btn-small cancel" href="#" ng-click="closePopup(0)">Cancel</a>
+    </h4>
+    <hr>
+    <p>To delete the current variety select delete.</p><p>To change the existing variety enter the changes and select edit.</p><p>To add a new variety enter the details and select add.</p><p>Index is the order in which styles are displayed.</p>
+
+	 <input type="text" ui-reset ng-model="wmVarieties.wmNew.text" placeholder="add/edit style" maxlength="{{wmVarieties.config.length}}"/> 
+	 <input id="idx" type="number" ng-model="wmVarieties.wmNew.idx" min="{{wmVarieties.config.min}}" max="{{wmVarieties.config.max}}"/> 
+	 <hr>
+	 <a style="float:right;margin-right:10px;" class="btn btn-small btn-success" href="#" ng-click="closePopup(1)">Add</a>
+	 <a style="float:right;margin-right:10px;" class="btn btn-small btn-success" href="#" ng-click="closePopup(2)">Edit</a>
+	 <a style="float:right;margin-right:10px;" class="btn btn-small btn-danger" href="#" ng-click="closePopup(3)">Delete</a>
+</div>

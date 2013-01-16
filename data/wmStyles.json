@@ -1,0 +1,10 @@
+{"data":[
+{"text":"Red","id":1},
+{"text":"Rose","id":2},
+{"text":"White","id":3},
+{"text":"Sparkling","id":4},
+{"text":"Dessert","id":5},
+{"text":"Fortified","id":6}
+],"config":
+{"min":0,"max":9,"length":10}
+}

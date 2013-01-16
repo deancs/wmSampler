@@ -1,0 +1,22 @@
+<div id="wmWine">
+    <div id="wmWineTitle">
+        <span ng-model="wine.title">Wine title</span>
+        <select class="wmSelect" ng-change="" ng-model="wine.winery" size="1" ng-options="winery.name as winery.name for wmWinery in wmWineries | filter:searchtext | orderBy:predicate" value="{{winery.name}}"></select>
+    </div>
+    <div id="wmWineProfile">
+        <select class="wmSelect" ng-change="" ng-model="wine.style" size="1" ng-options="style.name as style.name for style in wmStyles | filter:searchtext | orderBy:predicate" value="{{style.name}}"></select>
+        <select class="wmSelect" ng-change="" ng-model="wine.country" size="1" ng-options="country.name as country.name for country in wmCountries | filter:searchtext | orderBy:predicate" value="{{country.name}}"></select>
+        <select class="wmSelect" ng-change="" ng-model="wine.region" size="1" ng-options="region.name as region.name for region in wmRegions | filter:searchtext | orderBy:predicate" value="{{region.name}}"></select>
+    </div>
+   
+    <div id=wmWineRegion">
+        <select class="wmSelect" ng-change="" ng-model="wine.region[0].name" size="1" ng-options="region.name as region.name for region in wmRegions | filter:searchtext | orderBy:predicate" value="{{region.name}}"></select>
+        <select class="wmSelect" ng-change="" ng-model="wine.region[0].percent" size="1" ng-options="region.name as region.name for region in wmRegions | filter:searchtext | orderBy:predicate" value="{{region.name}}"></select>
+
+        <select class="wmSelect" ng-change="" ng-model="wine.region[1].name" size="1" ng-options="region.name as region.name for region in wmRegions | filter:searchtext | orderBy:predicate" value="{{region.name}}"></select>
+        <select class="wmSelect" ng-change="" ng-model="wine.region[1].percent" size="1" ng-options="region.name as region.name for region in wmRegions | filter:searchtext | orderBy:predicate" value="{{region.name}}"></select>
+
+        <select class="wmSelect" ng-change="" ng-model="wine.region[2].name" size="1" ng-options="region.name as region.name for region in wmRegions | filter:searchtext | orderBy:predicate" value="{{region.name}}"></select>
+        <select class="wmSelect" ng-change="" ng-model="wine.region[2].percent" size="1" ng-options="region.name as region.name for region in wmRegions | filter:searchtext | orderBy:predicate" value="{{region.name}}"></select>
+    </div>
+</div>
